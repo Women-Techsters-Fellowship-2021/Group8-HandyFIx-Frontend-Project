@@ -1,0 +1,401 @@
+body{
+    border:0px;
+    margin:0px;
+    padding:0px;
+}
+.hero-section
+{
+    /* width: 1440px; */
+    width: 100%;
+    height: 100vh;
+    background-color:#E5E5E5;
+
+}
+
+/* -----------------navbar icons----------------- */
+
+.hero-section nav
+{
+    display:flex;
+}
+
+
+nav   a 
+{
+    text-decoration: none;
+    /* color: #0A58CA; */
+
+}
+nav ul
+{
+    display:flex;
+}
+
+nav ul li 
+{
+    list-style-type: none;
+    
+}
+
+
+.logo a
+{
+    
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    margin: 53px 24px 200px 39px;
+    line-height: 54px;
+    color: #0A58CA;
+
+
+
+}
+
+.first-links
+{
+    margin-top: 35px;
+}
+
+.first-links a
+{
+    margin-right: 30px;
+    color: #03193A;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.sec-links a
+{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    
+}
+
+.sec-links li 
+{
+    /* margin-left: 367px;
+    margin-right: 30px; */
+    margin:30px 30px 88px 300px;
+
+}
+
+.sec-links li a
+{
+    color: #03193A;
+
+}
+
+.butn
+{
+    background-color: #0A58CA;
+    color: #FAFDFF;
+    width: 123px;
+    height:46px;
+    border-radius: 8px;
+    border:0px;
+    margin-top: 18px;
+}
+
+.butn a 
+{
+    color: #FAFDFF;
+    text-decoration: none;
+
+}
+
+/* --------------------hero-text----------------- */
+
+.hero-text
+{
+    margin-left: 80px;
+    font-family: Segoe UI;
+}
+.hero-text h3
+{
+    color: #03193A;
+   
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 60px;
+    /* margin-top: -px; */
+
+}
+
+.hero-text h3 span
+{
+    color:#0A58CA;
+}
+
+.hero-text p
+{
+   width: 400px;
+   margin-top: -20px;
+   height: 49px;
+   font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+
+
+}
+
+/* .hero-img
+{
+    display: flex;
+    float: right;
+    margin-top:-340px;
+    background:url(../Images/Vector.png )no-repeat;
+    background-size: 350px;
+    background-position: 20px 5px;
+    height: 300px;
+    padding-left: -55px;
+    padding-top: 25px;
+    padding-bottom:100px; 
+} */
+
+.hero-img
+
+{
+    float: right;
+    display: flex;
+    margin-top:-340px;
+    position: relative;
+
+}
+.hero-img img
+{
+    /* padding-right: 50px; */
+    /* width: 400px;
+    height: 300px; */
+
+}
+
+.img1
+{
+    position: relative;
+    width: 400px;
+    height: 380px;
+    right:10px;
+}
+
+.img2
+{
+    position: absolute;
+    width: 390px;
+    height: 320px;
+    right:85px;
+    top:20px;
+    /* right:10px; */
+    
+}
+
+
+/* ----------------section one--------------- */
+
+
+.sec-one
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #FAFDFF;
+    margin-bottom: 0px;
+}
+
+.sec-title
+{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.sec-title h3
+{
+    color:#052C65;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 64px;
+/* identical to box height */
+
+text-align: center;
+}
+
+.sec-info span 
+{
+    display:flex;
+}
+
+.section-p
+{
+    display: block;
+}
+
+.first-span div p
+{
+    display: block;
+    width: 207px;
+    height: 90px;
+    font-family: Segoe UI;
+    text-align: center;
+
+}
+
+.sec-span div p
+{
+    width: 297px;
+    height: 90px;
+    text-align: center;
+
+}
+
+
+.images
+{
+    width: 77px;
+    height: 68px;
+} 
+
+.first-span 
+{
+    margin-top:-15px;
+    margin-left: 70px;
+}
+
+.sec-info div
+{
+    text-align: center;
+}
+
+#div-one
+{
+    /* margin-right:100px; */
+}
+
+/* .sec-icon
+{
+    margin-top: -600px;
+
+} */
+#icon1
+{ 
+    margin-top: 70px;
+    /* margin-left: 200px; */
+    width: 300px;
+    height: 60px;
+}
+
+.sec-span 
+{
+    margin-left: 300px;
+    margin-top: -70px;
+}
+
+#icon2
+{
+    margin-left:-250px;
+    margin-top:140px;
+    width: 270px;
+    height: 150px;
+}
+
+#icon3
+{
+    width: 270px;
+    height: 120px;
+    /* margin-left:-300px; */
+    margin-top:40px;
+
+}
+
+
+
+/* ----------------sec2--------------- */
+.sec-two
+{
+    height: 100vh;
+    /* background-color:#FAFDFF; */
+    background-color: pink;
+    padding:1px;
+    display:flex;
+}
+
+.sec2-first-div
+{
+    margin-top:50px;
+    margin-left:80px;
+}
+
+.sec2-first-div h3
+{
+    /* position: absolute; */
+    width: 427px;
+    height: 108px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 64px;
+    color: #03193A;
+}
+
+.sec2-first-div p
+{
+    width: 330px;
+    height: 230px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.sec2-first-div button
+{
+    border: 1px solid #0A58CA;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width:90px;
+    height: 30px;
+    margin-top:10px;
+}
+
+.sec2-first-div button a
+{
+    color:#0A58CA;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 27px;
+    text-decoration:none;
+}
+
+.sec2-sec-div
+{
+    display: block;
+
+}
+.sec2-sec-div span
+{
+    display:flex;
+}
+
+/* -----------------section three------- */
+.sec-three
+{
+    height: 100vh;
+    padding:1px;
+    background-color:black;
+}

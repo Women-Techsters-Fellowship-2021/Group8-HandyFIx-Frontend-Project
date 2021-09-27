@@ -1,10 +1,16 @@
-
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import LandingPage from './Pages/landing';
+
 
 function App() {
   return (
     <div>
-     <h1>Hello World</h1>
+    
+     <BrowserRouter>
+     
+        <LandingPage/>
+     </BrowserRouter>
     </div>
   );
 }
