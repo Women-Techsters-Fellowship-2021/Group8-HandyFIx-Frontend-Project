@@ -1,50 +1,46 @@
 import "../Styles/login.css";
 import image2 from "../Images/image2.jpg";
 import React from "react";
-import useContextGetter from '../hooks/useContextGetter';
-import useLoggedIn from '../hooks/useLoggedIn';
-import { useForm } from 'react-hook-form';
-//import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { useState } from "react";
 
 
 
 function Login() {
-  //redirect the user to the dashboard
-  //if they are already signed in
-  useLoggedIn();
-  const { register, handleSubmit } = useForm();
-  const context = useContextGetter();
+  const history = useHistory();
 
-  const loginHandler = ({ email, password }) => {
-    
-    let userdata= {
-      email: email,
-      password: password,
-    };
+  const initialState = {
+    Email: "",
+    Password: ""
+  };
+  const [values, setValues] = useState(initialState);
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    e.preventDefault();
+    setValues({
+      ...values, 
+      [name]: value,
+    });
+    //console.log(values)
+  };
 
-    fetch(`https://localhost:5001/api/v1/auth/login`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(userdata)
-        })
-            .then(res => res.json())
-            .then(result => {
-                if (result.error) {
-                  return alert(result.message);
-                }
-                context.dispatch({
-                  type: 'LOGIN',
-                  payload: result.body,
-                });
-               // history.push('/dashboard');
-
-            })
-            
-            .catch(err => {
-              alert('an error occured. please try again later');
-            })
+  function loginHandler() {
+    fetch('https://localhost:5001/api/v1/auth/login', {
+      method: "POST",
+      body: JSON.stringify({
+        Email: values.Email,
+        Password: values.Password
+      }),
+      headers: {
+        "Content-type": "application/json"
+      }
+    })
+      .then(response => response.json())
+      .then(json => console.log(json))
+      .catch(error => {
+        console.log('Error message: ', error)
+      });
+    history.push('/');
   }
  
   return (
@@ -54,26 +50,29 @@ function Login() {
             <div className="formBx">
                 <h2>Welcome</h2>
                 <h3>Login to your Account</h3>
-                <form onSubmit={handleSubmit(loginHandler)}>
+                <form action="" onSubmit={loginHandler}>
                     <div className="inputBx">
                         <span>Email</span>
                         <input type="text"
-                            name="" 
+                            name="Email" 
                             placeholder="email"
-                            required
-                            {...register('email')} />
+                            value={values.Email}
+                            onChange={handleChange}
+                            required />
                     </div>
             
                     <div className="inputBx">
                         <span>Password</span>
                         <input type="text"
-                            name="" 
+                            name="Password" 
                             placeholder="password"
-                            required
-                            {...register('password')} />
+                            value={values.Password}
+                            onChange={handleChange}
+                            required />
                     </div>
                     <div className="remember">
                         <label><input type="checkbox" name="" />Remember me</label>
+                        <a href="/#">Forgot Password?</a>
                     </div>
                     <div className="inputBx">
                         <input type="submit" value="Login" name="" />

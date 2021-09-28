@@ -99,7 +99,7 @@
     letter-spacing: 1px;
     color: #607d8b;
     background: transparent;
-    border-radius: 30px;
+    border-radius: 8px;
 }
 
 .form-container .contentBx .formBx .inputBx input[type="submit"] {
@@ -123,6 +123,10 @@
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
+}
+
+.form-container .contentBx .formBx .remember a {
+    float: right;
 }
 
 .form-container .contentBx .formBx .inputBx p {
