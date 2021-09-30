@@ -86,6 +86,7 @@ const SignUp = () => {
                 placeholder="password"
                 id="password"
                 name="password"
+                type="password"
                 required
                 onChange={handleChange}
               />
@@ -93,6 +94,7 @@ const SignUp = () => {
                 className="firstinput"
                 placeholder="confirm password"
                 id="confirmPassword"
+                type="password"
                 required
                 onChange={handleChange}
               />
