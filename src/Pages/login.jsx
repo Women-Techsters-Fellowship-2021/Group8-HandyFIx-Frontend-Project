@@ -3,7 +3,8 @@ import "../Styles/login.css";
 import image2 from "../Images/image2.jpg";
 //import { useHistory } from 'react-router-dom';
 import React, { useState } from 'react';   
-import axios from 'axios';  
+import axios from 'axios'; 
+ 
 function Login(props) {  
     const [user, setuser] = useState({ Email: '', Password: ''});  
     const apiUrl = "http://localhost:5000/api/v1/auth/login";    

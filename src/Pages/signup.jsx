@@ -1,94 +1,124 @@
-/* import React, { useState } from 'react'  
-import axios from 'axios'; 
-import "../Styles/login.css";
-import image2 from "../Images/image2.jpg";
-import { useHistory } from 'react-router-dom';
 
-function Signup(props) { 
-  const history = useHistory(); 
-  const [data, setdata] = useState({ Email: '', Password: '', ConfirmPassword: '' })  
-  const apiUrl = "http://localhost:5000/api/v1/auth/register";  
-  const Registration = (e) => {  
-    e.preventDefault();  
-    //debugger;  
-    const data1 = { 
-        Email: data.Email, 
-        Password: data.Password, 
-        ConfirmPassword: data.ConfirmPassword
-         };  
-    axios.post(apiUrl, data1)  
-      .then((result) => {  
-        //debugger;  
-        console.log(result.data);  
-        if (result.data.Status === 'Invalid')  
-          alert('Invalid User');  
-        else  
-            props.history.push('/login')  
-      })
-      .catch(error=> {
-          console.log(error);
-      }) 
-      history.push('/login')  
-  }  
-  const onChange = (e) => {  
-    e.persist();  
-    //debugger;  
-    setdata({ ...data, [e.target.name]: e.target.value });  
-  }  
+import React from "react";
+import { Link } from "react-router-dom";
+import "../Styles/signup.css";
+import sign from "../Images/sign.png";
+import { useState } from "react";
+import { toast  } from "react-toastify";
+
+const SignUp = () => {
+  const [userData, setUserData] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const [signUpDetails, setSignUpDetails] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [validationErrorMsg, setValidationErrorMsg] = useState({
+    confirmPassword: "",
+  });
+
+  const handleChange = (e) => {
+    setUserData({
+      ...userData,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // const isValid = validatePassword()
+    // if(isValid){
+    if (userData.password === userData.confirmPassword) {
+      setSignUpDetails({
+        email: userData.email,
+        password: userData.password,
+      });
+      toast.success("SignUp succesful");
+      console.log("=====>", signUpDetails);
+      e.target.reset();
+    } else {
+      setValidationErrorMsg({
+        confirmPassword: "password does not match!",
+      });
+    }
+  };
+  console.log("=====>", signUpDetails);
+
   return (
-    <div className="form-container">  
-        <div className="contentBx">
-            <div className="formBx">
-                <h2>Welcome</h2>
-                <h3>Signup to your Account</h3>
-                <form action="" onSubmit={Registration}>
-                    <div className="inputBx">
-                        <span>Email</span>
-                        <input type="text"
-                            name="Email" 
-                            placeholder="Email"
-                            value={data.Email}
-                            onChange={onChange}
-                            required />
-                    </div>
-            
-                    <div className="inputBx">
-                        <span>Password</span>
-                        <input type="text"
-                            name="Password" 
-                            placeholder="Password"
-                            value={data.Password}
-                            onChange={onChange}
-                            required />
-                    </div>
-                    <div className="inputBx">
-                        <span>Confirm Password</span>
-                        <input type="text"
-                            name="ConfirmPassword" 
-                            placeholder="Confirmpassword"
-                            value={data.ConfirmPassword}
-                            onChange={onChange}
-                            required />
-                    </div>
-                    <div className="remember">
-                        <label><input type="checkbox" name="" />Remember me</label>
-                        <a href="/#">Forgot Password?</a>
-                    </div>
-                    <div className="inputBx">
-                        <input type="submit" value="Signup" name="" />
-                    </div>
-                    <div className="inputBx">
-                        <p>Already have an account? <a href="/login">login</a></p>
-                    </div>
-                </form>
+    <div className="entire">
+      <div className="bodily">
+        <div className="firstbody">
+          <img src={sign} width={600} height={900} alt="" />
+        </div>
+
+        <div className="secondbody">
+          <h1>SignUp</h1>
+          <div className="bodyP">
+            <p>Welcome to our community</p>
+          </div>
+          <h3>Account type</h3>
+          <div className="userbutton">
+            <div className="userbutton1">
+              <button></button>
             </div>
+            <div className="userbutton2">
+              <button></button>
+            </div>
+          </div>
+
+          <div className="formalert">
+            <form onSubmit={handleSubmit}>
+              <input
+                className="firstinput"
+                placeholder="@email"
+                type="text"
+                id="email"
+                required
+                onChange={handleChange}
+              />
+              <input
+                className="firstinput"
+                placeholder="password"
+                id="password"
+                name="password"
+                required
+                onChange={handleChange}
+              />
+              <input
+                className="firstinput"
+                placeholder="confirm password"
+                id="confirmPassword"
+                required
+                onChange={handleChange}
+              />
+               <small className="Error">{validationErrorMsg.confirmPassword}</small>
+              <button>Create Account</button>
+            </form>
+
+          </div>
+
+          <div className="privacy">
+            {" "}
+            <p>
+              By creating an account you agree to the <Link>Terms of conditions</Link> and <Link>privacy policy</Link>{" "}
+            </p>
+          </div>
+          <div className="safety">
+            Already have an account?{" "}
+            <span>
+              <Link to='/login' >Log in</Link>
+            </span>
+          </div>
         </div>
-        <div className="imgBx">
-            <img src={image2} alt="artisan" />
-        </div>
-    </div>  
-       
-  );  
-};  
-  
-export default Signup */
+      </div>
+    </div>
+  );
+};
+
+export default SignUp;
+
