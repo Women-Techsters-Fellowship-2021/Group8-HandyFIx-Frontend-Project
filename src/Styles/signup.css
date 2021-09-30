@@ -38,6 +38,7 @@
 .secondbody h1 {
   margin-left: 40px;
   margin-top: 90px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .bodyP p {
@@ -45,18 +46,21 @@
   margin-top: 15px;
   background-color: white;
   margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .secondbody h3 {
   margin-left: 40px;
   margin-top: 15px;
   margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .userbutton {
   display: flex;
   flex-direction: row;
   margin-left: 30px;
+  
 }
 
 .userbutton1 {
@@ -103,8 +107,13 @@
   height: 56px;
   margin-bottom: 15px;
   background: #0A58CA;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 }
-
+.formalert button [type="submit"] :hover{
+  background: #03193A;
+  align-items: center;
+}
 .privacy{
     margin-left: 70px;
     margin-bottom: 30px;

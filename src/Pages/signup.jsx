@@ -53,7 +53,7 @@ const SignUp = () => {
     <div className="entire">
       <div className="bodily">
         <div className="firstbody">
-          <img src={sign} width={600} height={900} alt="" />
+          <img src={sign} width={600} height={800} alt="" />
         </div>
 
         <div className="secondbody">
