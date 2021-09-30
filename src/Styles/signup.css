@@ -1,0 +1,132 @@
+/* * {
+  padding: 0px;
+  margin: 0px;
+} */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+.entire {
+ 
+  max-width: 100vmax;
+}
+
+.firstbody {
+    margin-top: 0px;
+    height: 800px;
+    width: 600px;
+    margin-left:90px;
+    background:linear-gradient(url(../Images/sign.png) no-repeat);
+    background-size: cover;
+    mix-blend-mode: normal;
+
+}
+
+.bodily {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+.secondbody {
+  height: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.secondbody h1 {
+  margin-left: 40px;
+  margin-top: 90px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bodyP p {
+  margin-left: 40px;
+  margin-top: 15px;
+  background-color: white;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.secondbody h3 {
+  margin-left: 40px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.userbutton {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  
+}
+
+.userbutton1 {
+
+    width: 16px;
+    height: 16px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    margin-left: 15px;
+    border-radius:8px;
+}
+
+.userbutton2 {
+
+  width: 16px;
+  height: 16px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  margin-left: 15px;
+  border-radius:8px;
+}
+
+.formalert form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formalert input {
+  width: 450px;
+  height: 56px;
+  border-radius: 8px;
+  margin-left: 40px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #03193a;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.formalert button {
+  margin-left: 40px;
+  border-radius: 8px;
+  width: 440px;
+  height: 56px;
+  margin-bottom: 15px;
+  background: #0A58CA;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+.formalert button [type="submit"] :hover{
+  background: #03193A;
+  align-items: center;
+}
+.privacy{
+    margin-left: 70px;
+    margin-bottom: 30px;
+    width:400px;
+    margin-top:15px ;
+}
+.safety{
+    margin-left: 170px;   
+}
+
+.Error{
+  color:red;
+  margin-left: 35px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}

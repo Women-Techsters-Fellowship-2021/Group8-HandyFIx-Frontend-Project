@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // css for landing page
 import '../Styles/landing.css'
 
@@ -50,9 +50,9 @@ const LandingPage =()=>
                         </ul>
 
                         <ul className='sec-links'>
-                            <li><Link>Login</Link></li>
+                            <li><Link to="/login">Login</Link></li>
                             
-                            <button type='submit' className='butn'><Link>Sign Up</Link></button>
+                            <button type='submit' className='butn'><Link to="signup">Sign Up</Link></button>
                             
                         </ul>
                     </nav>
