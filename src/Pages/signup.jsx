@@ -38,7 +38,7 @@ const SignUp = () => {
         password: userData.password,
       });
       toast.error("SignUp succesful");
-      console.log("=====>", signUpDetails);
+    console.log("=====>", signUpDetails);
       e.target.reset();
     } else {
       setValidationErrorMsg({
@@ -46,13 +46,13 @@ const SignUp = () => {
       });
     }
   };
-  console.log("=====>", signUpDetails);
+   console.log("=====>", signUpDetails);
 
   return (
     <div className="entire">
       <div className="bodily">
         <div className="firstbody">
-          <img src={sign} width={600} height={800} alt="" />
+          <img src={sign} width={800} height={650} alt="" />
         </div>
 
         <div className="secondbody">
@@ -63,9 +63,11 @@ const SignUp = () => {
           <h3>Account type</h3>
           <div className="userbutton">
             <div className="userbutton1">
+              <label>User</label>
               <button></button>
             </div>
             <div className="userbutton2">
+            <label>Artisan</label>
               <button></button>
             </div>
           </div>
@@ -106,8 +108,7 @@ const SignUp = () => {
           <div className="privacy">
             {" "}
             <p>
-              By creating an account you agree to the
-              <span>Terms of conditions</span> and privacy policy{" "}
+              By creating an account you agree to the <Link>Terms of conditions</Link> and <Link>privacy policy</Link>{" "}
             </p>
           </div>
           <div className="safety">
