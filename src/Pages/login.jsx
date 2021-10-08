@@ -40,13 +40,13 @@ function Login(props) {
     return (  
         
         <div className="form-container">  
-        <div className="contentBx">
+          <div className="contentBx">
             <div className="formBx">
                 <h2>Welcome</h2>
                 <h3>Login to your Account</h3> 
                       <form onSubmit={loginHandler} className="users">  
                         <div className="inputBx">
-                          <span>Email</span>  
+                          {/* <span>Email</span>  */} 
                           <input 
                           type="email" 
                           value={user.Email} 
@@ -57,7 +57,7 @@ function Login(props) {
                           placeholder="Enter Email"/>  
                         </div>  
                         <div className="inputBx">
-                        <span>Password</span>  
+                        {/* <span>Password</span> */}  
                         <input 
                           type="password"  
                           value={user.Password} 
@@ -74,15 +74,15 @@ function Login(props) {
                         <input type="submit" value="Login" name="" />
                     </div>
                     <div className="inputBx">
-                        <p>Don't have an account? <a href="/#">Sign Up</a></p>
+                        <p>Don't have an account? <a href="/signup">Sign Up</a></p>
                     </div>
                 </form>
             </div>
-        </div>
-        <div className="imgBx">
+          </div>
+          <div className="imgBx">
             <img src={image2} alt="artisan" />
+          </div>
         </div>
-    </div>
     )  
 }  
   
