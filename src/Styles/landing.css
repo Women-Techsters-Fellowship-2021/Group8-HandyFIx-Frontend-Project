@@ -372,6 +372,7 @@ text-align: center;
     margin-top:10px;
 }
 
+
 .sec2-first-div button a
 {
     color:#0A58CA;
@@ -399,8 +400,8 @@ text-align: center;
 
 .img-div
 {
-    width: 210px;
-    height: 130px;
+    width: 200px;
+    height: 115px;
 }
 
 .img-div img
@@ -439,6 +440,11 @@ box-shadow: inset -10px 0px 10px -10px rgb(192, 177, 177); */
  
 }
 
+#special-img 
+{
+    margin-left: 180px;
+}
+
 
 /* -----------------section three------- */
 .sec-three
@@ -453,6 +459,7 @@ box-shadow: inset -10px 0px 10px -10px rgb(192, 177, 177); */
     color:#FAFDFF;
 }
 
+
 .biggest-span
 {
     display: grid;
@@ -461,6 +468,8 @@ box-shadow: inset -10px 0px 10px -10px rgb(192, 177, 177); */
     margin-left: 65px;
     justify-content: center;
 }
+
+
 .img-span
 {
     display: flex;
@@ -488,7 +497,7 @@ box-shadow: inset -10px 0px 10px -10px rgb(192, 177, 177); */
     color: #FAFDFF;
     font-family: Segoe UI;
     font-style: normal;
-    font-weight: normal;
+    /* font-weight: normal; */
     font-weight: bold;
     font-size: 16px;
     /* line-height: 36px; */
@@ -505,7 +514,7 @@ box-shadow: inset -10px 0px 10px -10px rgb(192, 177, 177); */
     color: #FAFDFF;
 }
 
-/* ---------------sec-four------------ */
+/* ------------------sec-four--------------- */
 
 .sec-four
 {
@@ -556,7 +565,8 @@ box-shadow: inset -10px 0px 10px -10px rgb(192, 177, 177); */
 }
 
 
-/* ------------------sec-five-------------- */
+/* ---------------------sec-five---------------- */
+
 .sec-five
 {
     background-color:  #84c6f0;

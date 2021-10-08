@@ -130,6 +130,7 @@ const LandingPage =()=>
 
             </section>
 
+            {/*-----------section two-----------------  */}
 
             <section className='sec-two'>
                 <div className='sec2-first-div'>
@@ -158,14 +159,14 @@ const LandingPage =()=>
                         </figure>
                     </span>
 
-                    <figure className='img-div'>
+                    <figure className='img-div' id='special-img' >
 
                         <img  src={electrician}  alt=""/>
                         <figcaption>ELECTRICALS</figcaption>
                     </figure>
 
                     <span>
-                        <figure className='img-div'>
+                        <figure className='img-div' >
 
                             <img  src={ac}  alt=""/>
                             <figcaption>AC REPAIRS</figcaption>
