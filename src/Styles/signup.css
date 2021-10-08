@@ -1,13 +1,11 @@
-* {
+/* * {
   padding: 0px;
-  margin: 0px;
- 
+  margin: 0px; 
 }
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
 .entire {
 background: white;
-
 }
 
 .firstbody {
@@ -24,6 +22,7 @@ background: white;
 }
 
 .secondbody {
+
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,7 +31,7 @@ background: white;
 }
 
 .secondbody h1 {
-  margin-left: 40px;
+ margin-left: 40px;
   margin-top: 30px;
   font-family: 'Poppins', sans-serif;
 }
@@ -42,18 +41,21 @@ background: white;
   margin-top: 15px;
   background-color: white;
   margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .secondbody h3 {
   margin-left: 40px;
   margin-top: 15px;
   margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .userbutton {
   display: flex;
   flex-direction: row;
   margin-left: 30px;
+  
 }
 
 .userbutton1 {
@@ -101,7 +103,7 @@ background: white;
 }
 
 .formalert button {
-  margin-left: 40px;
+ margin-left: 40px;
   border-radius: 8px;
   width: 400px;
   height: 40px;
@@ -109,9 +111,13 @@ background: white;
   background: #0A58CA;
 font-size: 15px;
 }
+.formalert button [type="submit"] :hover{
+  background: #03193A;
+  align-items: center;
 
+}
 .privacy{
-    margin-left: 50px;
+ margin-left: 50px;
     margin-bottom: 60px;
     width:400px;
     margin-top:15px ;

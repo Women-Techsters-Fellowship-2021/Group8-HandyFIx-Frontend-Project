@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/signup.css";
@@ -38,8 +39,8 @@ const SignUp = () => {
         password: userData.password,
       });
       toast.success("SignUp succesful");
-    console.log("=====>", signUpDetails);
-      e.target.reset();
+      console.log("=====>", signUpDetails);
+ e.target.reset();
     } else {
       setValidationErrorMsg({
         confirmPassword: "password do not match!",
@@ -114,7 +115,7 @@ const SignUp = () => {
           <div className="safety">
             Already have an account?{" "}
             <span>
-              <Link>Log in</Link>
+              <Link to='/login' >Log in</Link>
             </span>
           </div>
         </div>
@@ -124,3 +125,4 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
