@@ -37,12 +37,12 @@ const SignUp = () => {
         email: userData.email,
         password: userData.password,
       });
-      toast.error("SignUp succesful");
+      toast.success("SignUp succesful");
     console.log("=====>", signUpDetails);
       e.target.reset();
     } else {
       setValidationErrorMsg({
-        confirmPassword: "password does not match!",
+        confirmPassword: "password do not match!",
       });
     }
   };
