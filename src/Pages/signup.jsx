@@ -40,20 +40,20 @@ const SignUp = () => {
       });
       toast.success("SignUp succesful");
       console.log("=====>", signUpDetails);
-      e.target.reset();
+ e.target.reset();
     } else {
       setValidationErrorMsg({
-        confirmPassword: "password does not match!",
+        confirmPassword: "password do not match!",
       });
     }
   };
-  console.log("=====>", signUpDetails);
+   console.log("=====>", signUpDetails);
 
   return (
     <div className="entire">
       <div className="bodily">
         <div className="firstbody">
-          <img src={sign} width={600} height={800} alt="" />
+          <img src={sign} width={800} height={650} alt="" />
         </div>
 
         <div className="secondbody">
@@ -64,9 +64,11 @@ const SignUp = () => {
           <h3>Account type</h3>
           <div className="userbutton">
             <div className="userbutton1">
+              <label>User</label>
               <button></button>
             </div>
             <div className="userbutton2">
+            <label>Artisan</label>
               <button></button>
             </div>
           </div>
